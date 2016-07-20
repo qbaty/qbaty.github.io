@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>前端笔记</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="前端 nodejs webpack redux vuex vue mvvm ES6 babel">
+<meta property="og:type" content="website">
+<meta property="og:title" content="前端笔记">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="前端笔记">
+<meta property="og:description" content="前端 nodejs webpack redux vuex vue mvvm ES6 babel">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端笔记">
+<meta name="twitter:description" content="前端 nodejs webpack redux vuex vue mvvm ES6 babel">
+  
+    <link rel="alternative" href="/atom.xml" title="前端笔记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">前端笔记</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-hello-webpack" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/20/hello-webpack/" class="article-date">
+  <time datetime="2016-07-20T04:36:15.000Z" itemprop="datePublished">2016-07-20</time>
+</a>
+		</span>
+		<span class="meta-elements author">qbaty qi</span>
+		<div class="commentscount">
+			
+				<a href="http://yoursite.com/2016/07/20/hello-webpack/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/20/hello-webpack/">强大的 Webpack</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>Webpack 已经随着 react 火了一段时间，不得不说前端的变化十分的快。每年都有新东西出来，Webpack 还没有玩热，又来了一个rollup，号称是下一代的打包工具。对前端来说，一涉及到性能，开发方式，打包就是一个回避不了的问题，在前端还没有这么百花齐放的过去也是这样。最早的时候用各种后台语言写的 combo 合并工具，后来是 ant，还有 Google closure compiler，再后来node 开始发展起来，随后伴随着node 的生态圈 Grunt Gulp 国内的 Fis 都开始流行起来。来到如今已经是一个百花齐放百家争鸣的好时代，任何优秀的工具都可以流行起来。早在前端 Bigpipe 技术被提出的时候，模块化开发的雏形就已经奠定，后来代码组织方式从早期的命名空间，到后来Commonjs规范，AMD 规范，以及国内的 CMD 规范都是为了解决代码如何模块化开发的问题。ES6规范的发布给了前端模块化开发先天的支持，意味着前端模块化开发可以通过各种辅助工具进入到下一个时代。</p>
+<p>早在Webpack 刚刚发布我就尝试了一下，当时几乎没有中文资料，偶尔国内 React社区 能翻到一下开荒的文章，自己花费了一些时间跑起来，但是很快也就被自己抛到脑后还是继续使用gulp。现在回想起来很大原因还是开发方式的问题，当时还没有使用 Babel 和 ES6, 也没有在代码中时刻 import 的习惯。所以可见每个工具其实是和开发方式和代码组织密切分不开的，近来模块化大行其道，各种前端MVVM 框架层出不穷，Webpack 已经成为项目工程化的标配。最近也开始在项目中使用Vue + Vuex + ES6 + Webpack 真实感受到了webpack 的各种便利。</p>
+<h1 id="Webpack-Introduction"><a href="#Webpack-Introduction" class="headerlink" title="Webpack Introduction"></a>Webpack Introduction</h1><blockquote>
+<p>官方文档 <a href="http://webpack.github.io/docs/" target="_blank" rel="external">http://webpack.github.io/docs/</a></p>
+</blockquote>
+<p>官方的介绍是 MODULE BUNDLER (模块打包器), 就是一个打包工具。从官方的定义来看似乎很纯粹，就是一个打包工具其他的事情Webpack不管，但实际上通过Webpack可以</p>
+<ul>
+<li><p>模块打包<br>webpack 会从入口开始去分析你的模块依赖从而把你的代码合并在一起生成一个文件，或是多个。</p>
+</li>
+<li><p>模块化开发<br>webpack 视万物为模块，无论是 js 还是 css 还是 图片，字体，以及其他资源，Webpack 都可以使用的简单的一句import 或是require 就可以让你在项目中使用你的引入的资源</p>
+</li>
+<li><p>处理资源<br>webpack 使用各种loader 来处理资源，常见的loader比如 style-loader, css-loader, less-loader, bable-loader, url-loader 框架相关的loader比如：jsx-loader, vue-loader</p>
+<ul>
+<li><p>压缩，混淆 es6, js<br>使用bable-loader 来转换 es6 的语法<br>可以使用 eslint-loader 验证你的js，官方提供 UglifyJsPlugin 插件来压缩混淆js</p>
+</li>
+<li><p>处理css，less, sass, postcss<br>可以通过 postcss-loader 来预处理css，比如加上css 属性的不同浏览器前缀</p>
+</li>
+<li><p>处理图片，字体<br>可以通过 url-loader 来把不需要外链的资源统统转为base64编码<br>可以使用第三方插件 ImageminPlugin 对所有图片进行压缩</p>
+</li>
+</ul>
+</li>
+<li><p>自动合并共用代码<br>webpack 的官方插件 CommonsChunkPlugin，你可以自由控制粒度</p>
+</li>
+<li><p>搭建开发服务器<br>使用webpack-dev-server<br>koa/express + webpack-hot-middle + webpack-dev-middle</p>
+</li>
+<li><p>自动刷新浏览器<br>liveloading小意思，webpack可以模块热更新，就是说局部更改代码比你刷新浏览器更快</p>
+</li>
+<li><p>最小化引入资源<br>下一代 rollup 的打包工具最耀眼的功能就是支持 treeshaking 了，而 webpack 2.0 也支持</p>
+</li>
+</ul>
+<p>Webpack 还有很多有用的功能：解析资源别名使你不用在import 后面写一大长串路径。你担心调试的时候找不到哪行代码，可以使用devtool的 sourcemap。如果你不想你的css 打包到js 里你可以使用 ExtractTextPlugin 来抽取css。你也可以配合 http-proxy-middleware 来做远程接口转发，由于开发的时候静态资源服务器是node，所以有各式各样的 middleware 来满足你的各种需求。</p>
+<p>Webpack 强大和灵活的地方是他的 plugin 和 loader，通过 loader 可以很轻易的对任何匹配的资源做操作，通过 plugin 则可以参与处理打包的阶段。再者他还提供了 middleware 的方式，可以配合 koa, express 一起使用。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack-工程化-模块化-打包/">webpack 工程化 模块化 打包</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">前端笔记</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2016 qbaty qi<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'qbaty';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
