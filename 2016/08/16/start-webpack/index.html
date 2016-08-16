@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>start webpack | 前端笔记</title>
+  <title>开始使用 Webpack | 前端笔记</title>
   <meta name="viewport" content="width=device-width">
-  <meta name="description" content="前端 nodejs webpack redux vuex vue mvvm ES6 babel">
+  <meta name="description" content="&amp;#x5B89;&amp;#x88C5;&amp;#x524D;&amp;#x63D0;&amp;#xFF1A;&amp;#x5DF2;&amp;#x7ECF;&amp;#x5B89;&amp;#x88C5;&amp;#x4E86;nodejs &amp;amp; npm&amp;#x6709;&amp;#x4E86; npm &amp;#x540E;&amp;#x5B89;&amp;#x88C5;&amp;#x975E;&amp;#x5E38;&amp;#x7684;&amp;#x65B9;&amp;#x4FBF;&amp;#xFF0C;&amp;#x4E0D;&amp;#x">
 <meta property="og:type" content="article">
-<meta property="og:title" content="start webpack">
+<meta property="og:title" content="开始使用 Webpack">
 <meta property="og:url" content="https://qbaty.github.io/2016/08/16/start-webpack/index.html">
 <meta property="og:site_name" content="前端笔记">
-<meta property="og:description" content="前端 nodejs webpack redux vuex vue mvvm ES6 babel">
-<meta property="og:updated_time" content="2016-08-16T03:15:37.000Z">
+<meta property="og:description" content="&amp;#x5B89;&amp;#x88C5;&amp;#x524D;&amp;#x63D0;&amp;#xFF1A;&amp;#x5DF2;&amp;#x7ECF;&amp;#x5B89;&amp;#x88C5;&amp;#x4E86;nodejs &amp;amp; npm&amp;#x6709;&amp;#x4E86; npm &amp;#x540E;&amp;#x5B89;&amp;#x88C5;&amp;#x975E;&amp;#x5E38;&amp;#x7684;&amp;#x65B9;&amp;#x4FBF;&amp;#xFF0C;&amp;#x4E0D;&amp;#x">
+<meta property="og:image" content="https://qbaty.github.io/2016/08/16/start-webpack/screen1.png">
+<meta property="og:updated_time" content="2016-08-16T09:46:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="start webpack">
-<meta name="twitter:description" content="前端 nodejs webpack redux vuex vue mvvm ES6 babel">
+<meta name="twitter:title" content="开始使用 Webpack">
+<meta name="twitter:description" content="&amp;#x5B89;&amp;#x88C5;&amp;#x524D;&amp;#x63D0;&amp;#xFF1A;&amp;#x5DF2;&amp;#x7ECF;&amp;#x5B89;&amp;#x88C5;&amp;#x4E86;nodejs &amp;amp; npm&amp;#x6709;&amp;#x4E86; npm &amp;#x540E;&amp;#x5B89;&amp;#x88C5;&amp;#x975E;&amp;#x5E38;&amp;#x7684;&amp;#x65B9;&amp;#x4FBF;&amp;#xFF0C;&amp;#x4E0D;&amp;#x">
+<meta name="twitter:image" content="https://qbaty.github.io/2016/08/16/start-webpack/screen1.png">
   
     <link rel="alternative" href="/atom.xml" title="前端笔记" type="application/atom+xml">
   
@@ -65,14 +67,49 @@
 		
   
     <h1 class="article-title entry-title" itemprop="name">
-      start webpack
+      开始使用 Webpack
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	
+    	<h2 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h2><p>&#x524D;&#x63D0;&#xFF1A;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;nodejs &amp; npm<br>&#x6709;&#x4E86; npm &#x540E;&#x5B89;&#x88C5;&#x975E;&#x5E38;&#x7684;&#x65B9;&#x4FBF;&#xFF0C;&#x4E0D;&#x8BBA;&#x662F;&#x5728;windows&#x8FD8;&#x662F;mac&#x4E0B;, &#x53EA;&#x9700;&#x8981;&#x4E00;&#x53E5;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack -g</div></pre></td></tr></table></figure></p>
+<p>&#x5C31;&#x53EF;&#x4EE5;&#x628A; webpack &#x5B89;&#x88C5;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5728;terminal &#x6216;&#x8005;&#x662F; cmd &#x91CC;&#x76F4;&#x63A5;&#x4F7F;&#x7528; webpack &#x4E86;&#x3002;&#x4E00;&#x822C;&#x5728;&#x9879;&#x76EE;&#x7684;&#x76EE;&#x5F55;&#x4E0B;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x52A0;&#x4E0A; &#x2013;save-dev &#x8FD9;&#x4E2A;&#x53C2;&#x6570;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack --save-dev</div></pre></td></tr></table></figure></p>
+<h2 id="&#x6253;&#x5305;"><a href="#&#x6253;&#x5305;" class="headerlink" title="&#x6253;&#x5305;"></a>&#x6253;&#x5305;</h2><p>&#x5047;&#x8BBE;&#x76EE;&#x5F55;&#x4E0B;&#x6709;&#x4E00;&#x4E2A; app.js &#x6587;&#x4EF6;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">helloworld</span> (<span class="params"></span>) </span>{</div><div class="line">  alert(<span class="string">&apos;hello world!&apos;</span>);</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<p>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x8F93;&#x5165;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack ./app.js ./bundle.js</div></pre></td></tr></table></figure></p>
+<p>&#x53D1;&#x73B0;&#x76EE;&#x5F55;&#x4E0B;&#x5DF2;&#x7ECF;&#x751F;&#x6210;&#x4E86;&#x4E00;&#x4E2A; bundle.js &#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x4F34;&#x968F;&#x7740;&#x4E00;&#x4E2A; webpack &#x4EFB;&#x52A1;&#x7684;&#x5B8C;&#x6210;&#x4FE1;&#x606F;&#x7684;&#x8F93;&#x51FA;</p>
+<p><img src="/2016/08/16/start-webpack/screen1.png" alt="webpack task"></p>
+<p>&#x8F93;&#x51FA;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<ul>
+<li>&#x8FD9;&#x6B21;&#x6253;&#x5305;&#x7684;MD5(Hash)</li>
+<li>Webpack &#x7684;&#x7248;&#x672C;&#x53F7;(Version)</li>
+<li>&#x8FD8;&#x6709;&#x6253;&#x5305;&#x82B1;&#x8D39;&#x7684;&#x65F6;&#x95F4;(Time)</li>
+</ul>
+<p>&#x968F;&#x540E;&#x4F1A;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF1A;</p>
+<ul>
+<li>&#x6253;&#x5305;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0; Asset</li>
+<li>&#x5305;&#x5927;&#x5C0F; Size</li>
+<li>&#x4EE3;&#x7801;&#x5757;&#x7F16;&#x53F7; Chunks</li>
+<li>&#x4EE3;&#x7801;&#x5757;&#x540D;&#x79F0; Chunk Names</li>
+</ul>
+<p>&#x6253;&#x5F00;bundle.js &#x4F1A;&#x770B;&#x5230;&#x5DF2;&#x7ECF;&#x751F;&#x6210;&#x4E86;&#x7684;&#x6587;&#x4EF6;, &#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x9605;&#x8BFB;&#x53BB;&#x6389;&#x4E86;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x6CE8;&#x91CA;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">modules</span>) </span>{ <span class="comment">// webpackBootstrap</span></div><div class="line">  <span class="comment">// The module cache</span></div><div class="line">  <span class="keyword">var</span> installedModules = {};</div><div class="line"></div><div class="line">  <span class="comment">// The require function</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">__webpack_require__</span>(<span class="params">moduleId</span>) </span>{</div><div class="line"></div><div class="line">    <span class="comment">// Check if module is in cache</span></div><div class="line">    <span class="keyword">if</span>(installedModules[moduleId])</div><div class="line">      <span class="keyword">return</span> installedModules[moduleId].exports;</div><div class="line"></div><div class="line">    <span class="comment">// Create a new module (and put it into the cache)</span></div><div class="line">    <span class="keyword">var</span> <span class="built_in">module</span> = installedModules[moduleId] = {</div><div class="line">      exports: {},</div><div class="line">      id: moduleId,</div><div class="line">      loaded: <span class="literal">false</span></div><div class="line">    };</div><div class="line"></div><div class="line">    <span class="comment">// Execute the module function</span></div><div class="line">    modules[moduleId].call(<span class="built_in">module</span>.exports, <span class="built_in">module</span>, <span class="built_in">module</span>.exports, __webpack_require__);</div><div class="line"></div><div class="line">    <span class="comment">// Flag the module as loaded</span></div><div class="line">    <span class="built_in">module</span>.loaded = <span class="literal">true</span>;</div><div class="line"></div><div class="line">    <span class="comment">// Return the exports of the module</span></div><div class="line">    <span class="keyword">return</span> <span class="built_in">module</span>.exports;</div><div class="line">  }</div><div class="line"></div><div class="line">  <span class="comment">// expose the modules object (__webpack_modules__)</span></div><div class="line">  __webpack_require__.m = modules;</div><div class="line"></div><div class="line">  <span class="comment">// expose the module cache</span></div><div class="line">  __webpack_require__.c = installedModules;</div><div class="line"></div><div class="line">  <span class="comment">// __webpack_public_path__</span></div><div class="line">  __webpack_require__.p = <span class="string">&quot;&quot;</span>;</div><div class="line"></div><div class="line">  <span class="comment">// Load entry module and return exports</span></div><div class="line">  <span class="keyword">return</span> __webpack_require__(<span class="number">0</span>);</div><div class="line"> })</div><div class="line"> ([</div><div class="line"><span class="comment">/* 0 */</span></div><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">module, exports</span>) </span>{</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">helloworld</span> (<span class="params"></span>) </span>{</div><div class="line">    alert(<span class="string">&apos;hello world!&apos;</span>);</div><div class="line">  }</div><div class="line">}]);</div></pre></td></tr></table></figure></p>
+<p>&#x901A;&#x8FC7;&#x9605;&#x8BFB;&#x6253;&#x5305;&#x751F;&#x6210;&#x540E;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x4E86;&#x89E3;webpack&#x6253;&#x5305;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x4EE5;&#x53CA;&#x6253;&#x5305;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x3002;<br>&#x6574;&#x4E2A;&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x8FD0;&#x884C;&#x51FD;&#x6570;&#xFF0C;&#x5206;&#x4E24;&#x90E8;&#x5206;&#xFF1A;</p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x662F;webpack&#x542F;&#x52A8;&#x67B6;&#xFF0C;&#x5176;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;&#xFF08;installedModules&#xFF09;&#x6765;&#x5B58;&#x653E; webpack modules&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;webpack &#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E0B;&#x7684;require&#x51FD;&#x6570;&#xFF08;&#x2019;<strong>webpack_require</strong>&#x2018;&#xFF09;&#xFF0C;&#x6700;&#x540E;&#x8FD9;&#x4E00;&#x53E5;&#xFF1A;<strong>webpack_require</strong>(0) &#x662F;&#x628A;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7684;&#x5B9E;&#x9645;&#x4EE3;&#x7801;&#x901A;&#x8FC7;require&#x51FD;&#x6570;&#x6267;&#x884C;&#x4E86;&#x4E00;&#x904D;</li>
+<li>&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x662F; app.js&#x91CC;&#x7684;&#x5B9E;&#x9645;&#x4EE3;&#x7801;&#xFF0C;&#x524D;&#x9762;&#x7684;&#x6CE8;&#x91CA;&#x662F;webpack &#x7ED9;&#x5B9E;&#x9645;&#x4EE3;&#x7801;&#x6A21;&#x5757;&#x7684; moduleId &#xFF0C;&#x5728;app.js &#x7684;&#x5B9E;&#x9645;&#x4EE3;&#x7801;&#x5916;&#x9762;&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x533F;&#x540D;&#x51FD;&#x6570;&#xFF0C;&#x628A;&#x53C2;&#x6570;module&#xFF0C;export&#xFF0C;<strong>webpack_require</strong>&#x4F20;&#x4E86;&#x8FDB;&#x6765;&#xFF0C;&#x65B9;&#x4FBF;&#x5B9E;&#x9645; app.js&#x91CC;&#x7684;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<h2 id="&#x6A21;&#x5757;&#x5316;"><a href="#&#x6A21;&#x5757;&#x5316;" class="headerlink" title="&#x6A21;&#x5757;&#x5316;"></a>&#x6A21;&#x5757;&#x5316;</h2><p>webpack &#x652F;&#x6301;&#x591A;&#x79CD;js&#x6A21;&#x5757;&#x65B9;&#x6848;&#x7684;&#x6253;&#x5305;&#xFF1A;</p>
+<ul>
+<li>ES6 modules</li>
+<li>Commonjs</li>
+<li>AMD</li>
+</ul>
+<p>&#x5047;&#x8BBE;&#x6709;&#x4E24;&#x4E2A;js &#x6587;&#x4EF6;,&#x4E00;&#x4E2A;&#x662F; app.js, &#x53E6;&#x4E00;&#x4E2A; util.js&#xFF0C;utils&#x91CC;&#x7684;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// CommonJs &#x89C4;&#x8303;&#x7684;&#x6A21;&#x5757;&#x5316;</span></div><div class="line"><span class="comment">// utils.js</span></div><div class="line"><span class="built_in">module</span>.exports = {</div><div class="line">  say: <span class="function"><span class="keyword">function</span> (<span class="params">word</span>) </span>{</div><div class="line">    alert(word);</div><div class="line">  }</div><div class="line">};</div></pre></td></tr></table></figure></p>
+<p>app.js &#x52A0;&#x5165;&#x5BF9;util&#x7684;&#x5F15;&#x7528;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> util = <span class="built_in">require</span>(./util.js);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">helloworld</span> (<span class="params"></span>) </span>{</div><div class="line">  util.say(<span class="string">&apos;hello world!&apos;</span>);</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<p>&#x6253;&#x5305;&#x5B8C;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/******/</span> ([</div><div class="line"><span class="comment">/* 0 */</span></div><div class="line"><span class="comment">/***/</span> <span class="function"><span class="keyword">function</span>(<span class="params">module, exports, __webpack_require__</span>) </span>{</div><div class="line"></div><div class="line">  <span class="keyword">var</span> util = __webpack_require__(<span class="number">1</span>)</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">helloworld</span> (<span class="params"></span>) </span>{</div><div class="line">    util.say(<span class="string">&apos;hello world!&apos;</span>);</div><div class="line">  }</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/***/</span> },</div><div class="line"><span class="comment">/* 1 */</span></div><div class="line"><span class="comment">/***/</span> <span class="function"><span class="keyword">function</span>(<span class="params">module, exports</span>) </span>{</div><div class="line"></div><div class="line">  <span class="built_in">module</span>.exports = {</div><div class="line">    say: <span class="function"><span class="keyword">function</span> (<span class="params">word</span>) </span>{</div><div class="line">      alert(word);</div><div class="line">    }</div><div class="line">  };</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/***/</span> }</div><div class="line"><span class="comment">/******/</span> ]);</div></pre></td></tr></table></figure></p>
+<p>&#x53D1;&#x73B0;&#x5728;bundle.js &#x91CC;&#xFF0C;app&#x91CC;&#x5F15;&#x7528;&#x7684;util.js&#x7684;&#x5730;&#x5740;&#x5DF2;&#x7ECF;&#x53D8;&#x4E3A;webpack&#x7684;moduleId&#x4E86;,require&#x4E5F;&#x88AB;&#x66FF;&#x6362;&#x4E3A;webpack&#x7684;&#x542F;&#x52A8;&#x67B6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;webpack_require&#x65B9;&#x6CD5;&#x3002;&#x6BCF;&#x4E2A;&#x6A21;&#x5757;&#x90FD;&#x88AB;&#x7F16;&#x53F7;&#xFF0C;app.js &#x4E3A; 0, util.js &#x4E3A; 1&#x3002;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;require &#x65B9;&#x6CD5;&#x7684;&#xFF0C;&#x5916;&#x9762;&#x533F;&#x540D;&#x51FD;&#x6570;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E5F;&#x589E;&#x52A0;&#x4E86;webpack_require&#x3002;</p>
+
     
 	</div>
 	<footer class="entry-footer">
@@ -82,6 +119,8 @@
 			</span>
 			<span class="tags">
 				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack-打包-工程化/">webpack 打包 工程化</a></li></ul>
+
 			</span>
 		</div>
 	</footer>
@@ -110,7 +149,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/08/16/start-webpack/" data-title="start webpack" data-url="https://qbaty.github.io/2016/08/16/start-webpack/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/16/start-webpack/" data-title="开始使用 Webpack" data-url="https://qbaty.github.io/2016/08/16/start-webpack/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
